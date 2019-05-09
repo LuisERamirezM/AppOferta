@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Oferta Académica CUCEI
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="search()">
+        <ion-icon name="search">
+
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+      <img src= 'https://blog.michelletorres.mx/wp-content/uploads/2013/10/Escudo_CUCEI.png'>
+  
+ <ion-card *ngFor="let oferta of ofertas" (click)="info(oferta)">
+
+    <ion-card-header *ngIf="oferta.hasOwnProperty('materia')">
+      <h2>Materia:</h2>  
+      {{ oferta.materia }}
+    </ion-card-header>
+    <ion-card-header *ngIf="oferta.hasOwnProperty('carrera')">
+        <h2>Carrera:</h2>
+      {{ oferta.carrera }}
+    </ion-card-header>
+    <ion-card-content *ngIf="oferta.hasOwnProperty('clave')">
+        <h2>Clave:</h2>
+      {{oferta.clave}}
+    </ion-card-content>
+    <ion-card-content *ngIf="oferta.hasOwnProperty('nrc')">
+        <h2>NRC:</h2>
+      {{oferta.nrc}}
+    </ion-card-content>
+    <ion-card-content *ngIf="oferta.hasOwnProperty('profesor')">
+      <h2>Profesor:</h2>
+      {{oferta.profesor}}
+    </ion-card-content>
+
+</ion-card>
+</ion-content>
