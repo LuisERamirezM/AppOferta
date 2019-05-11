@@ -41,13 +41,14 @@ export class BuscarPage {
   }
 
   getItems2(ev:any){
-      console.log(ev.target.value);
-      let materia = ev.target.value.toLowerCase();
-      this.ofertas = this.lista.filter(oferta => {
-        return oferta.materia.toLowerCase().includes(materia)
-      });
-      console.log(JSON.stringify(this.ofertas));
+    console.log(ev.target.value);
+    let materia = ev.target.value.toLowerCase();
+    this.ofertas = this.lista.filter(oferta => {
+      return oferta.materia.toLowerCase().includes(materia)
+    });
+    console.log(JSON.stringify(this.ofertas));
   }
+
 
   info(oferta){
     this.navCtrl.push(this.infoPage, {oferta: oferta});

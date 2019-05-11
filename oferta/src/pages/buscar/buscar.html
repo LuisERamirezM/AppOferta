@@ -15,18 +15,23 @@
 <ion-content padding>
   <ion-list>
       <ion-item *ngFor="let oferta of ofertas">
+
       <h2 *ngIf="oferta.hasOwnProperty('nrc')">
         {{oferta.nrc}}
       </h2>
+
       <p *ngIf="oferta.hasOwnProperty('clave')">
         {{oferta.clave}}
       </p>
+
       <p *ngIf="oferta.hasOwnProperty('seccion')"> 
         {{oferta.seccion}}
       </p>
+
       <p *ngIf="oferta.hasOwnProperty('materia')">
           {{oferta.materia}}
-        </p>
+      </p>
+
       <p *ngIf="oferta.hasOwnProperty('profesor')">  
         {{oferta.profesor}}
       </p>
